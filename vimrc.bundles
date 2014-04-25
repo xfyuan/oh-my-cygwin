@@ -1,0 +1,63 @@
+set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" Define bundles via Github repos
+
+" Bundle 'croaky/vim-colors-github'
+Bundle 'danro/rename.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
+Bundle 'tsaleh/vim-matchit'
+Bundle 'vim-scripts/ctags.vim'
+Bundle 'vim-scripts/tComment'
+
+" color theme
+Bundle 'w0ng/vim-hybrid'
+
+" core tools
+Bundle 'AutoClose'
+Bundle 'scrooloose/nerdtree'
+Bundle 'jlanzarotta/bufexplorer'
+Bundle 'godlygeek/tabular'
+Bundle 'ervandew/supertab'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'yssl/QFEnter'
+Bundle 'rcmdnk/vim-markdown'
+Bundle 'joker1007/vim-markdown-quote-syntax'
+
+" dev plus
+Bundle 'tacahiroy/ctrlp-funky'
+Bundle 'mattn/emmet-vim'
+Bundle 'kana/vim-textobj-user'
+Bundle 'vim-scripts/ZoomWin'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'bserem/vim-drupal'
+
+" snippets
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+
+Bundle 'vim-scripts/YankRing.vim'
+let g:yankring_history_dir = '~/.vim/tmp'
+let g:yankring_replace_n_pkey = '<leader>['
+let g:yankring_replace_n_nkey = '<leader>]'
+
+Bundle 'bling/vim-airline'
+let g:airline_theme='light'
+let g:airline_enable_fugitive=1
+let g:airline_enable_syntastic=0
+
+filetype on

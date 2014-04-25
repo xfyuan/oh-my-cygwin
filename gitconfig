@@ -1,0 +1,49 @@
+[user]
+	name = "Your name"
+	email = yourname@abc.com
+[push]
+  default = current
+[color]
+  ui = auto
+[alias]
+  aa = add --all
+  ap = add --patch
+  br = branch
+  rb = branch -r
+  rbd = branch -r -d
+  ca = commit --amend
+  ci = commit -v
+  co = checkout
+  cb = checkout -b
+  diffc = diff --staged
+  diffs = diff --stat
+  last  = log -1 HEAD
+  lg    = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+  lg1   = log -p -1
+  mg    = merge
+  mg1   = merge --squash
+  mgf   = merge --no-ff
+  pr  = !hub pull-request
+  pub = archive --format  = zip master
+  ss  = status
+
+  sbi = submodule init
+  sbu = submodule update
+  sbp = submodule foreach git pull
+  sbc = submodule foreach git co master
+
+  upm = !git fetch origin && git rebase origin/master
+  upd = !git fetch origin && git rebase origin/development
+  create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
+  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
+  merge-branch = !git checkout master && git merge @{-1}
+
+  pushub = !sh -c 'git push -v --tags --set-upstream origin $1:$1' -
+[core]
+  excludesfile = ~/.gitignore
+  # autocrlf = input
+[merge]
+  ff = only
+  no-ff = false
+[include]
+  path = .gitconfig.local
